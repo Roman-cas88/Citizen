@@ -1,7 +1,7 @@
 let address = {
-    Country,
-    City,
-    Street,
-    NumHouse,
+    Country: undefined,
+    City: undefined,
+    Street: undefined,
+    NumHouse: undefined,
 }
 export default address;

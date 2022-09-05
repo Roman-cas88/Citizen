@@ -1,8 +1,8 @@
 import address from "./address.js"
 let citizen = {
-    Name,
-    Surname,
-    Age,
+    Name: undefined,
+    Surname: undefined,
+    Age: undefined,
     Register: address,
 }
 export default citizen;

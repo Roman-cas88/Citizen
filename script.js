@@ -50,11 +50,12 @@ function funcCreate() {
     addFormCitizen.innerHTML = formCitizen();
     main.append(addFormCitizen)
 
-};
-    // Create citizen1
-    const citizen1 = new citizen(document.querySelector('#name').value, document.querySelector('#sname').value,
+        // Create citizen1
+        const citizen1 = new citizen(document.querySelector('#name').value, document.querySelector('#sname').value,
         document.querySelector('#age').value)
         console.log(citizen1.Register)
+
+};
 
 
 // function to add address
