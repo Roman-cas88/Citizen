@@ -1,8 +1,13 @@
-import address from "./address.js"
-let citizen = {
-    Name: undefined,
-    Surname: undefined,
-    Age: undefined,
-    Register: address,
+class Citizen {
+	constructor (name, surname, age, registered) {
+	this.name = name;
+    this.surname = surname;
+	this.age = age;
+    this.registered = registered; 
 }
-export default citizen;
+    register(address) {
+        this.address = address;
+    };
+}
+
+export default Citizen;

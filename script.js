@@ -1,5 +1,5 @@
-import citizen from "./citizen.js";
-import address from "./address.js";
+import Citizen from "./citizen.js";
+import Address from "./address.js";
 
 // Create <main>
 const newMain = document.createElement('main');
@@ -50,18 +50,17 @@ function funcCreate() {
     addFormCitizen.innerHTML = formCitizen();
     main.append(addFormCitizen)
 
-        // Create citizen1
-        const citizen1 = new citizen(document.querySelector('#name').value, document.querySelector('#sname').value,
-        document.querySelector('#age').value)
-        console.log(citizen1.Register)
-
 };
-
+let citizen1 = {};
 
 // function to add address
 function funcCreateCitizen() {
+    // Create citizen1
+    citizen1 = new Citizen(document.querySelector('#name').value, document.querySelector('#sname').value,
+        document.querySelector('#age').value, false)
     document.getElementById('divFormCitizen').remove();
     document.getElementById('buttonCreateCitizen').remove();
+
     const formAddress = () => {
         return `
 <p>Country: <input  id="country"></p>
@@ -73,24 +72,27 @@ function funcCreateCitizen() {
     let addFormAddress = document.createElement('div')
     addFormAddress.id = "divFormAddress";
     addFormAddress.innerHTML = formAddress();
-    main.append(addFormAddress)
+    main.append(addFormAddress);
+
     foot.before(addButtonRegisterCitizen);
 
 };
 
 
 // Function to registered citizen
-function funcRegister() {
-    alert('Citizen <NAME> registered');
-    console.log()
-}
+const funcRegister = () => {
+    if (citizen1.registered == false)  {
+            // Create citizen1
+            const address1 = new Address(document.querySelector('#country').value, document.querySelector('#city').value,
+                document.querySelector('#street').value, document.querySelector('#numHouse').value)
+            console.log(address1);
+            citizen1.register(address1);
+            alert('Citizen ' + `${citizen1.name} ${citizen1.surname}` + ' registered');
 
-
-
-// 
-
-
-
+            console.log(`Citizen ${citizen1.name} ${citizen1.surname} ${citizen1.age} registered at: ${citizen1.address.country}, ${citizen1.address.city}, ${citizen1.address.street}, 
+    ${citizen1.address.numHouse}`)
+        }
+    };
 
 // const formAddress = () => {
 //     return `
