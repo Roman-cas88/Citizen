@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+}
+
+@media only screen and (max-width: 600px) {
+    .btn {
+        width: 27%;
+    }
+
+    .btnCreate {
+        width: 27%;
+    }
+
+    .dropdown {
+        display: block;
+    }
+
+    .show {
+        width: 100%;
+        display: flex;
+        position: relative;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .btnCreate {
+        margin: 15px 0px;
+        width: 100%;
+    }
+
+    input {
+        width: 100%;
+    }
+
+    .divForms {
+        text-align: center;
+    }
+}
