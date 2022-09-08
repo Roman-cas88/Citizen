@@ -60,6 +60,7 @@ function funcCreate() {
     }
     let addFormCitizen = document.createElement('div')
     addFormCitizen.id = "divFormCitizen";
+    addFormCitizen.className = "divForms";
     addFormCitizen.innerHTML = formCitizen();
     main.append(addFormCitizen)
 
@@ -129,6 +130,7 @@ function funcCreateCitizen() {
 
         let addFormAddress = document.createElement('div')
         addFormAddress.id = "divFormAddress";
+        addFormAddress.className = "divForms";
         addFormAddress.innerHTML = formAddress();
         main.append(addButtonRegisterCitizen);
         main.append(addFormAddress);
